@@ -17,7 +17,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&s=${query}`);
+      const response = await axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&s=${query}`);
       if (response.data.Search) {
         setMovies(response.data.Search);
         setError('');
